@@ -2,6 +2,7 @@ import React, { FC } from "react"
 import { makeStyles } from "@material-ui/core"
 import Foo from "./Foo"
 import Bar from "./Bar"
+import FooBar from "./FooBar"
 
 const useStyles = makeStyles({
     app: {
@@ -27,6 +28,7 @@ const App: FC = () => {
             <header className={classes.appHeader}>
                 <Foo />
                 <Bar />
+                <FooBar />
             </header>
         </div>
     )

@@ -6,6 +6,7 @@ export interface Store {
     setFoo: (newFoo: string) => void
     bar: string
     setBar: (newBar: string) => void
+    fooBar: string
 }
 
 export const StoreContext = createContext<Store>({} as Store)
@@ -20,6 +21,9 @@ const StoreProvider: FC = ({ children }) => {
         bar: "old bar",
         setBar(newBar: string) {
             this.bar = newBar
+        },
+        get fooBar() {
+            return `${this.foo} ${this.bar}`
         }
     }))
 
